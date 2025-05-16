@@ -1,4 +1,4 @@
-
+import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 type User = {
@@ -20,8 +20,12 @@ export const Request = () => {
   return (
     <ul>
       {user.map((u) => (
-        <li key={u.id}>{u.name}</li>
+        <Li key={u.id}>{u.name}</Li>
       ))}
     </ul>
   );
 };
+const Li = styled.li`
+  color: ${(props) => props.theme.colors.white};
+  font-weight: 300;
+`;
