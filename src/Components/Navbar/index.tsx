@@ -1,10 +1,14 @@
-import { NavbarContainer } from "./styles";
-import { NavbarProps } from "./types";
-
-export const Navbar: React.FC<NavbarProps> = ({ title }) => {
+import { NavbarContainer, LinkRouter, LinkContainer } from "./styles";
+// import { Link } from "react-router-dom"; -- > ta no styled
+export const Navbar: React.FC = () => {
   return (
-    <NavbarContainer data-aos="fade-up" data-aos-duration="500">
-      {title}
+    <NavbarContainer>
+      <h1>React <strong>Router</strong></h1>
+      <LinkContainer>
+        <LinkRouter to="/"> Home</LinkRouter>
+        <LinkRouter to="/termos"> Termos</LinkRouter>
+        <LinkRouter to="/politicas">Politicas</LinkRouter>
+      </LinkContainer>
     </NavbarContainer>
   );
 };
